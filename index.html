@@ -1090,6 +1090,7 @@
           <button class="filter-btn active" onclick="filterContent(this, 'all')">All</button>
           <button class="filter-btn" onclick="filterContent(this, 'recap')">Event Recaps</button>
           <button class="filter-btn" onclick="filterContent(this, 'set')">Live Sets</button>
+          <button class="filter-btn" onclick="filterContent(this, 'playlist')">Playlists</button>
           <button class="filter-btn" onclick="filterContent(this, 'spotlight')">Spotlights</button>
         </div>
 
@@ -1117,6 +1118,18 @@
               <p class="card-tag">Live Set · 58 min</p>
               <h3 class="card-title">DJ Marvex — Afrohouse Takeover</h3>
               <p class="card-meta">May 28, 2025 · Vault 44</p>
+            </div>
+          </article>
+
+          <!-- Playlist 1 -->
+          <article class="content-card" data-type="playlist">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a1000 0%,#3d2800 50%,#8b5a00 100%);">
+              <span style="z-index:1; font-size:1.1rem;">DJ PONE</span>
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Playlist</p>
+              <h3 class="card-title">DJ Pone: Mix V.03 - Summer 26'</h3>
+              <p class="card-meta">July 1, 2026 · 1 hour playlist</p>
             </div>
           </article>
 
@@ -1165,6 +1178,18 @@
               <p class="card-tag">Community Spotlight</p>
               <h3 class="card-title">K3nzō: Vinyl, Vintage, and a Vision for the Underground</h3>
               <p class="card-meta">Mar 21, 2025 · Profile</p>
+            </div>
+          </article>
+
+          <!-- Playlist 2 -->
+          <article class="content-card" data-type="playlist">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a0808 0%,#3d1206 40%,#8b3a00 100%);">
+              <span style="z-index:1; font-size:1.1rem;">DJ CASHHCAM</span>
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Playlist</p>
+              <h3 class="card-title">DJ CashhCam: Mix V.03 - Summer 26'</h3>
+              <p class="card-meta">July 15, 2026 · 35 min playlist</p>
             </div>
           </article>
 
@@ -1396,7 +1421,7 @@
         </div>
         <p>The pulse of downtown's underground music scene — raw sets, real culture, and the artists who define what comes next.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; position:relative; z-index:1;">
-          <button class="btn-primary" onclick="switchTab('tickets')">Get Tickets</button>
+          <button class="btn-primary" onclick="document.querySelector('.events-list').scrollIntoView({behavior:'smooth'})">Get Tickets</button>
           <button class="btn-ghost" onclick="switchTab('book-dj')">Book Now</button>
         </div>
       </section>
