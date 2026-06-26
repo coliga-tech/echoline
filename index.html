@@ -1188,7 +1188,7 @@
             </div>
             <div class="card-body">
               <p class="card-tag">Playlist</p>
-              <h3 class="card-title">DJ CashhCam: Mix V.03 - Summer 26'</h3>
+              <h3 class="card-title">DJ CashhCam: Mix V.04 - R&B Groove</h3>
               <p class="card-meta">July 15, 2026 · 35 min playlist</p>
             </div>
           </article>
@@ -1421,7 +1421,7 @@
         </div>
         <p>The pulse of downtown's underground music scene — raw sets, real culture, and the artists who define what comes next.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; position:relative; z-index:1;">
-          <button class="btn-primary" onclick="document.querySelector('.events-list').scrollIntoView({behavior:'smooth'})">Get Tickets</button>
+          <button class="btn-primary" onclick="const el = document.querySelector('.events-list'); window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth'})">Get Tickets</button>
           <button class="btn-ghost" onclick="switchTab('book-dj')">Book Now</button>
         </div>
       </section>
