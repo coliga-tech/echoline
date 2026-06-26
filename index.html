@@ -1045,7 +1045,7 @@
 
     <ul class="nav-tabs" role="tablist">
       <li role="presentation">
-        <button role="tab" class="active" onclick="switchTab('tickets')" data-tab="tickets">Tickets</button>
+        <button role="tab" class="active" onclick="const el = document.querySelector('.events-list'); window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth'})" data-tab="tickets">Tickets</button>
       </li>
       <li role="presentation">
         <button role="tab" onclick="switchTab('content')" data-tab="content">Content</button>
@@ -1100,12 +1100,12 @@
           <!-- Featured card -->
           <article class="content-card featured" data-type="recap">
             <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a0808 0%,#3d1206 40%,#8b3a00 100%);">
-              <span style="z-index:1; font-size:1.8rem;">UNDERGROUND VOL. IV</span>
+              <span style="z-index:1; font-size:1.8rem;">GROOVEROOM VOL. I</span>
             </div>
             <div class="card-body">
               <p class="card-tag">Event Recap</p>
-              <h3 class="card-title">Underground Vol. IV — A Night That Redefined the Basement</h3>
-              <p class="card-meta">June 14, 2025 · 8 min read · 240 in attendance</p>
+              <h3 class="card-title">GrooveRoom  Vol. I — HouseParty to Start The Summer</h3>
+              <p class="card-meta">May 15, 2026 · 40 in attendance</p>
             </div>
           </article>
 
@@ -1169,27 +1169,27 @@
             </div>
           </article>
 
-          <!-- Spotlight 2 -->
-          <article class="content-card" data-type="spotlight">
-            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#0a0d1a 0%,#0d1a3d 50%,#1a2d6b 100%);">
-              <span style="z-index:1; font-size:1.1rem;">K3NZŌ</span>
-            </div>
-            <div class="card-body">
-              <p class="card-tag">Community Spotlight</p>
-              <h3 class="card-title">K3nzō: Vinyl, Vintage, and a Vision for the Underground</h3>
-              <p class="card-meta">Mar 21, 2025 · Profile</p>
-            </div>
-          </article>
-
           <!-- Playlist 2 -->
           <article class="content-card" data-type="playlist">
-            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a0808 0%,#3d1206 40%,#8b3a00 100%);">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#0a0d1a 0%,#0d1a3d 50%,#1a2d6b 100%;">
               <span style="z-index:1; font-size:1.1rem;">DJ CASHHCAM</span>
             </div>
             <div class="card-body">
               <p class="card-tag">Playlist</p>
               <h3 class="card-title">DJ CashhCam: Mix V.04 - R&B Groove</h3>
               <p class="card-meta">July 15, 2026 · 35 min playlist</p>
+            </div>
+          </article>
+
+          <!-- Spotlight 2 -->
+          <article class="content-card" data-type="spotlight">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a0808 0%,#3d1206 40%,#8b3a00 100%);">
+              <span style="z-index:1; font-size:1.1rem;">K3NZŌ</span>
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Community Spotlight</p>
+              <h3 class="card-title">K3nzō: Vinyl, Vintage, and a Vision for the Underground</h3>
+              <p class="card-meta">Mar 21, 2025 · Profile</p>
             </div>
           </article>
 
@@ -1421,7 +1421,7 @@
         </div>
         <p>The pulse of downtown's underground music scene — raw sets, real culture, and the artists who define what comes next.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; position:relative; z-index:1;">
-          <button class="btn-primary" onclick="const el = document.querySelector('.events-list'); window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 200, behavior: 'smooth'})">Get Tickets</button>
+          <button class="btn-primary" onclick="const el = document.querySelector('.events-list'); window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth'})">Get Tickets</button>
           <button class="btn-ghost" onclick="switchTab('book-dj')">Book Now</button>
         </div>
       </section>
@@ -1630,9 +1630,9 @@
       <img src="/echologo-removebg.png" alt="Echoline" />
       <span class="footer-wordmark">Echoline</span>
     </a>
-    <p class="footer-copy">© 2025 Echoline. Downtown underground, Atlanta.</p>
+    <p class="footer-copy">© 2025 echoline. Downtown underground, Atlanta.</p>
     <nav class="footer-links" aria-label="Footer links">
-      <a href="#">Instagram</a>
+      <a href="https://www.instagram.com/echoline.media">Instagram</a>
       <a href="#">SoundCloud</a>
       <a href="#">Contact</a>
     </nav>
