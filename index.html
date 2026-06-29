@@ -1048,7 +1048,7 @@
 
     <ul class="nav-tabs" role="tablist">
       <li role="presentation">
-        <button role="tab" class="active" onclick="const el = document.querySelector('.events-list'); window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth'})" data-tab="tickets">Tickets</button>
+        <button role="tab" class="active" onclick="switchTab('tickets'); setTimeout(() => { const el = document.querySelector('.events-list'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth'}); }, 150);" data-tab="tickets">Tickets</button>
       </li>
       <li role="presentation">
         <button role="tab" onclick="switchTab('content')" data-tab="content">Content</button>
@@ -1070,7 +1070,7 @@
 
   <!-- Mobile drawer -->
   <div id="mobile-menu" role="dialog" aria-label="Mobile navigation">
-    <button onclick="switchTab('tickets'); closeMobileMenu(); setTimeout(() => { const el = document.querySelector('.events-list'); window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 200, behavior: 'smooth'}); }, 50);" data-tab="tickets" class="active">Tickets</button>
+    <button onclick="switchTab('tickets'); closeMobileMenu(); setTimeout(() => { const el = document.querySelector('.events-list'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 200, behavior: 'smooth'}); }, 150);" data-tab="tickets" class="active">Tickets</button>
     <button onclick="switchTab('content'); closeMobileMenu();" data-tab="content">Content</button>
     <button onclick="switchTab('book-dj'); closeMobileMenu();" data-tab="book-dj">Book a DJ</button>
     <button onclick="switchTab('book-video'); closeMobileMenu();" data-tab="book-video">Book a Videographer</button>
