@@ -1032,6 +1032,7 @@
       white-space: nowrap;
     }
   </style>
+  <script src="https://ticketscandy.com/assets/javascript/tc_widget.js"></script>
 </head>
 <body>
 
@@ -1642,22 +1643,25 @@
   <!-- Ticket modal -->
   <div id="ticket-modal" style="
     display:none; position:fixed; inset:0; z-index:2000;
-    background:rgba(0,0,0,0.82); backdrop-filter:blur(6px);
+    background:rgba(0,0,0,0.92); backdrop-filter:blur(6px);
     align-items:center; justify-content:center; padding:16px;
   ">
     <div style="
       background:var(--bg-card); border:1px solid var(--border);
-      border-radius:var(--radius-lg); padding:40px 36px; max-width:420px; width:100%;
-      text-align:center;
+      border-radius:var(--radius-lg); padding:24px; max-width:680px; width:100%;
+      max-height:90vh; overflow-y:auto; position:relative;
     ">
-      <div style="
-        width:56px; height:56px; background:var(--grad); border-radius:50%;
-        display:flex; align-items:center; justify-content:center;
-        margin:0 auto 18px; font-size:1.5rem; color:#0A0A0A; font-weight:700;
-      ">🎟</div>
-      <h3 style="font-family:var(--font-display); font-size:1.6rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--amber); margin-bottom:10px;">Redirecting…</h3>
-      <p id="modal-event-name" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:24px;">Taking you to the ticketing page.</p>
-      <button class="btn-ghost" onclick="closeTicketModal()" style="width:100%;">Close</button>
+      <button onclick="closeTicketModal()" style="
+        position:absolute; top:14px; right:16px;
+        background:none; border:none; color:var(--text-muted);
+        font-size:1.4rem; cursor:pointer; line-height:1;
+      ">✕</button>
+      <p id="modal-event-name" style="
+        font-family:var(--font-display); font-size:1.3rem;
+        letter-spacing:0.06em; text-transform:uppercase;
+        color:var(--amber); margin-bottom:20px; padding-right:24px;
+      "></p>
+      <div id="tc-container-iframe-18982"></div>
     </div>
   </div>
 
@@ -1749,10 +1753,13 @@
        TICKET MODAL
     ============================================= */
     function buyTicket(eventName) {
-      document.getElementById('modal-event-name').textContent =
-        'Taking you to tickets for: ' + eventName;
+      document.getElementById('modal-event-name').textContent = eventName;
       const modal = document.getElementById('ticket-modal');
       modal.style.display = 'flex';
+      TCWidget.createWidget({
+        iframeContainerId: 'tc-container-iframe-18982',
+        iframeUrl: '//ticketscandy.com/e/18982/embed'
+      });
     }
 
     function closeTicketModal() {
