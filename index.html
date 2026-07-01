@@ -1073,16 +1073,16 @@
 
     <ul class="nav-tabs" role="tablist">
       <li role="presentation">
-        <button role="tab" class="active" onclick="switchTab('tickets'); setTimeout(() => { const el = document.querySelector('.events-list'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth'}); }, 150);" data-tab="tickets">Tickets</button>
+        <button role="tab" class="active" onclick="switchTab('tickets'); setTimeout(() => { const el = document.querySelector('.events-list'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth'}); }, 150);" data-tab="tickets">Events</button>
       </li>
       <li role="presentation">
-        <button role="tab" onclick="switchTab('content')" data-tab="content">Content</button>
+        <button role="tab" onclick="switchTab('content')" data-tab="content">Media</button>
       </li>
       <li role="presentation">
-        <button role="tab" onclick="switchTab('book-dj')" data-tab="book-dj">Book a DJ</button>
+        <button role="tab" onclick="switchTab('book-dj')" data-tab="book-dj">Local Talent</button>
       </li>
       <li role="presentation">
-        <button role="tab" onclick="switchTab('book-video')" data-tab="book-video">Book a Videographer</button>
+        <button role="tab" onclick="switchTab('book-video')" data-tab="book-video">Music Society</button>
       </li>
     </ul>
 
@@ -1095,16 +1095,16 @@
 
   <!-- Mobile drawer -->
   <div id="mobile-menu" role="dialog" aria-label="Mobile navigation">
-    <button onclick="switchTab('tickets'); closeMobileMenu(); setTimeout(() => { const el = document.querySelector('.events-list'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 200, behavior: 'smooth'}); }, 150);" data-tab="tickets" class="active">Tickets</button>
-    <button onclick="switchTab('content'); closeMobileMenu();" data-tab="content">Content</button>
-    <button onclick="switchTab('book-dj'); closeMobileMenu();" data-tab="book-dj">Book a DJ</button>
-    <button onclick="switchTab('book-video'); closeMobileMenu();" data-tab="book-video">Book a Videographer</button>
+    <button onclick="switchTab('tickets'); closeMobileMenu(); setTimeout(() => { const el = document.querySelector('.events-list'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 200, behavior: 'smooth'}); }, 150);" data-tab="tickets" class="active">Events</button>
+    <button onclick="switchTab('content'); closeMobileMenu();" data-tab="content">Media</button>
+    <button onclick="switchTab('book-dj'); closeMobileMenu();" data-tab="book-dj">Local Talent</button>
+    <button onclick="switchTab('book-video'); closeMobileMenu();" data-tab="book-video">Music Society</button>
   </div>
 
   <main>
 
     <!-- =============================================
-         TAB 1: CONTENT
+         TAB 1: MEDIA
     ============================================= -->
     <div id="tab-content" class="tab-panel" role="tabpanel">
 
@@ -1227,104 +1227,126 @@
 
 
     <!-- =============================================
-         TAB 2: BOOK A DJ
+         TAB 2: LOCAL TALENT
     ============================================= -->
-    <div id="tab-book-dj" class="tab-panel" role="tabpanel">
+    <div id="tab-content" class="tab-panel" role="tabpanel">
+
+      <!-- Content Grid -->
       <section class="section">
-        <div class="booking-layout">
+        <p class="section-label">Local Talent</p>
+        <h2 class="section-title">Echoline <span>Talent Network</span></h2>
 
-          <!-- Pitch -->
-          <div class="booking-pitch">
-            <p class="section-label">Echoline Talent Network</p>
-            <h2>Book a <span>DJ</span> for Your Event</h2>
-            <p>Tap into Atlanta's underground talent roster. Whether you're throwing a warehouse party, rooftop session, or private event — we connect you with the right sound for the right room.</p>
-            <div class="perks">
-              <div class="perk">
-                <div class="perk-dot"></div>
-                <p><strong>Curated roster</strong> — handpicked DJs across afrohouse, techno, hip-hop, amapiano, and more.</p>
-              </div>
-              <div class="perk">
-                <div class="perk-dot"></div>
-                <p><strong>Fast response</strong> — hear back within 24 hours on availability and rates.</p>
-              </div>
-              <div class="perk">
-                <div class="perk-dot"></div>
-                <p><strong>Full-service support</strong> — we coordinate gear, logistics, and press kits.</p>
-              </div>
-              <div class="perk">
-                <div class="perk-dot"></div>
-                <p><strong>Any scale</strong> — intimate 50-person sets to 1,000+ capacity venues.</p>
-              </div>
+        <!-- Filter row -->
+        <div class="filter-row" role="group" aria-label="Filter content">
+          <button class="filter-btn active" onclick="filterContent(this, 'all')">All</button>
+          <button class="filter-btn" onclick="filterContent(this, 'dj')">DJs</button>
+          <button class="filter-btn" onclick="filterContent(this, 'producers')">Producers</button>
+          <button class="filter-btn" onclick="filterContent(this, 'artists')">Artists</button>
+          <button class="filter-btn" onclick="filterContent(this, 'camera')">Camera Operators</button>
+        </div>
+
+        <!-- Grid -->
+        <div class="content-grid" id="content-grid">
+
+          <!-- Featured card -->
+          <article class="content-card featured" data-type="dj">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a0808 0%,#3d1206 40%,#8b3a00 100%);">
+              <span style="z-index:1; font-size:1.8rem;">DJ 1</span>
             </div>
-          </div>
-
-          <!-- Form -->
-          <div class="form-card">
-            <p class="form-title">Booking Request</p>
-
-            <div id="dj-form-body">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="dj-name">Your Name</label>
-                  <input type="text" id="dj-name" placeholder="First & last name" />
-                </div>
-                <div class="form-group">
-                  <label for="dj-email">Email</label>
-                  <input type="email" id="dj-email" placeholder="you@example.com" />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="dj-date">Event Date</label>
-                  <input type="date" id="dj-date" />
-                </div>
-                <div class="form-group">
-                  <label for="dj-type">Event Type</label>
-                  <select id="dj-type">
-                    <option value="" disabled selected>Select type</option>
-                    <option>Warehouse Party</option>
-                    <option>Rooftop Session</option>
-                    <option>Club Night</option>
-                    <option>Private Event</option>
-                    <option>Pop-up / Market</option>
-                    <option>Corporate Event</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="dj-genre">Music Genre Preference</label>
-                <select id="dj-genre">
-                  <option value="" disabled selected>Select genre</option>
-                  <option>Afrohouse</option>
-                  <option>Amapiano</option>
-                  <option>Techno</option>
-                  <option>Hip-Hop / Rap</option>
-                  <option>R&B / Neo-Soul</option>
-                  <option>House / Deep House</option>
-                  <option>Dancehall / Reggae</option>
-                  <option>Open Format</option>
-                  <option>Other / Surprise Me</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="dj-notes">Additional Notes</label>
-                <textarea id="dj-notes" placeholder="Venue size, vibe, budget range, specific artist requests..."></textarea>
-              </div>
-              <button class="btn-primary form-submit" onclick="submitForm('dj')">Submit Request</button>
-              <p class="form-note">No commitment. We'll reach out within 24 hours.</p>
+            <div class="card-body">
+              <p class="card-tag">DJ</p>
+              <h3 class="card-title">FirstName LastName</h3>
+              <p class="card-meta">Description goes here</p>
             </div>
+          </article>
 
-            <div class="form-success" id="dj-success">
-              <div class="success-icon">✓</div>
-              <h3>Request Sent</h3>
-              <p>We'll be in touch within 24 hours with availability and options from our DJ roster.</p>
+          <!-- Set 1 -->
+          <article class="content-card" data-type="producers">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(160deg,#0d0d1a 0%,#1a0d3d 60%,#3d0d6b 100%);">
+              <span style="z-index:1; font-size:1.1rem;">PRODUCER 1</span>
             </div>
-          </div>
+            <div class="card-body">
+              <p class="card-tag">Producer</p>
+              <h3 class="card-title">FirstName LastName</h3>
+              <p class="card-meta">Description goes here</p>
+            </div>
+          </article>
+
+          <!-- Playlist 1 -->
+          <article class="content-card" data-type="artists">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a1000 0%,#3d2800 50%,#8b5a00 100%);">
+              <span style="z-index:1; font-size:1.1rem;">ARTIST 1</span>
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Artist</p>
+              <h3 class="card-title">FirstName LastName</h3>
+              <p class="card-meta">Description goes here</p>
+            </div>
+          </article>
+
+          <!-- Spotlight 1 -->
+          <article class="content-card" data-type="camera">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#0a1a0a 0%,#0d3d1a 50%,#1a5c28 100%);">
+              <span style="z-index:1; font-size:1.1rem;">CAMERA PERSON 1</span>
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Camera Operator</p>
+              <h3 class="card-title">FirstName LastName</h3>
+              <p class="card-meta">Description goes here</p>
+            </div>
+          </article>
+
+          <!-- Recap 2 -->
+          <article class="content-card" data-type="dj">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a1000 0%,#3d2800 50%,#8b5a00 100%);">
+              <span style="z-index:1; font-size:1.1rem;">DJ 2</span>
+            </div>
+            <div class="card-body">
+              <p class="card-tag">DJ</p>
+              <h3 class="card-title">FirstName LastName</h3>
+              <p class="card-meta">Description goes here</p>
+            </div>
+          </article>
+
+          <!-- Set 2 -->
+          <article class="content-card" data-type="producers">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(160deg,#1a0a0d 0%,#3d0a1a 60%,#6b1a30 100%);">
+              <span style="z-index:1; font-size:1.1rem;">PRODUCER 2</span>
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Producer</p>
+              <h3 class="card-title">FirstName LastName</h3>
+              <p class="card-meta">Description goes here</p>
+            </div>
+          </article>
+
+          <!-- Playlist 2 -->
+          <article class="content-card" data-type="artists">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#0a0d1a 0%,#0d1a3d 50%,#1a2d6b 100%);">
+              <span style="z-index:1; font-size:1.1rem;">ARTIST 2</span>
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Artist</p>
+              <h3 class="card-title">FirstName LastName</h3>
+              <p class="card-meta">Description goes here</p>
+            </div>
+          </article>
+
+          <!-- Spotlight 2 -->
+          <article class="content-card" data-type="camera">
+            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a0808 0%,#3d1206 40%,#8b3a00 100%);">
+              <span style="z-index:1; font-size:1.1rem;">CAMERA PERSON 2</span>
+            </div>
+            <div class="card-body">
+              <p class="card-tag">Camera Operator</p>
+              <h3 class="card-title">FirstName LastName</h3>
+              <p class="card-meta">Description goes here</p>
+            </div>
+          </article>
 
         </div>
       </section>
-    </div><!-- /tab-book-dj -->
+    </div><!-- /tab-content -->
 
 
     <!-- =============================================
@@ -1336,7 +1358,7 @@
 
           <!-- Pitch -->
           <div class="booking-pitch">
-            <p class="section-label">Echoline Visual Collective</p>
+            <p class="section-label">Echoline Talent Network</p>
             <h2>Book a <span>Videographer</span></h2>
             <p>Document the moment the right way. Our visual collective captures live sets, event recaps, and artist content with a cinematic eye built for the underground aesthetic.</p>
             <div class="perks">
@@ -1437,7 +1459,7 @@
 
 
     <!-- =============================================
-         TAB 4: TICKETS
+         TAB 4: EVENTS
     ============================================= -->
     <div id="tab-tickets" class="tab-panel active" role="tabpanel">
       
@@ -1473,7 +1495,7 @@
               <div class="meta">
                 <span>Fri · 9 PM – 2 AM</span>
                 <span>DōM (next to Sidebar)</span>
-                <span>Atlanta, GA</span>
+                <span>Downtown Atlanta</span>
               </div>
               <div class="event-tags">
                 <span class="event-tag">Disco</span>
@@ -1495,28 +1517,28 @@
           <!-- Event 2 -->
           <div class="event-row">
             <div class="event-date-box">
-              <div class="day">19</div>
+              <div class="day">16</div>
               <div class="month">Jul</div>
             </div>
             <div class="event-info">
-              <h3>The Basement Files Vol. V</h3>
+              <h3>Living Room I</h3>
               <div class="meta">
-                <span>Sat · 10 PM – 5 AM</span>
-                <span>Vault 44</span>
+                <span>Thu · 7 PM – 12 AM</span>
+                <span>DōM (next to Sidebar)</span>
                 <span>Downtown Atlanta</span>
               </div>
               <div class="event-tags">
-                <span class="event-tag">Techno</span>
-                <span class="event-tag">Industrial</span>
-                <span class="event-tag">21+</span>
+                <span class="event-tag">Create</span>
+                <span class="event-tag">Commune</span>
+                <span class="event-tag">Hangout</span>
               </div>
             </div>
             <div class="event-cta">
               <div class="price-block">
                 <div class="price-label">From</div>
-                <div class="price-amount">$20</div>
+                <div class="price-amount">$5</div>
               </div>
-              <button class="btn-primary" onclick="buyTicket('The Basement Files Vol. V')">Buy Tickets</button>
+              <button class="btn-primary" onclick="buyTicket('Living Room I')">Buy Tickets</button>
             </div>
           </div>
 
@@ -1527,57 +1549,29 @@
               <div class="month">Jul</div>
             </div>
             <div class="event-info">
-              <h3>Ember Nights IV</h3>
+              <h3>Free RSVP</h3>
               <div class="meta">
-                <span>Sat · 8 PM – 3 AM</span>
-                <span>The Biltmore Ballroom</span>
-                <span>Midtown Atlanta</span>
+                <span>TBD</span>
+                <span>Atlanta organization that provides free music education, community and performance opportunities for young creatives.</span>
+                <span></span>
               </div>
               <div class="event-tags">
-                <span class="event-tag">R&amp;B</span>
-                <span class="event-tag">Hip-Hop</span>
-                <span class="event-tag">Neo-Soul</span>
+                <span class="event-tag">Music Society</span>
+                <span class="event-tag">GSU</span>
+                <span class="event-tag">Workshops</span>
                 <span class="event-tag">All Ages</span>
               </div>
             </div>
             <div class="event-cta">
               <div class="price-block">
-                <div class="price-label">From</div>
-                <div class="price-amount">$30</div>
+                <div class="price-label"></div>
+                <div class="price-amount">Free</div>
               </div>
-              <button class="btn-primary" onclick="buyTicket('Ember Nights IV')">Buy Tickets</button>
+              <button class="btn-primary" onclick="buyTicket('Ember Nights IV')">RSVP</button>
             </div>
           </div>
 
-          <!-- Event 4 -->
-          <div class="event-row">
-            <div class="event-date-box">
-              <div class="day">09</div>
-              <div class="month">Aug</div>
-            </div>
-            <div class="event-info">
-              <h3>Deep Current: Late Night Series</h3>
-              <div class="meta">
-                <span>Sat · 11 PM – 6 AM</span>
-                <span>The Grid</span>
-                <span>East Atlanta Village</span>
-              </div>
-              <div class="event-tags">
-                <span class="event-tag">Deep House</span>
-                <span class="event-tag">Afro Disco</span>
-                <span class="event-tag">21+</span>
-              </div>
-            </div>
-            <div class="event-cta">
-              <div class="price-block">
-                <div class="price-label">From</div>
-                <div class="price-amount">$18</div>
-              </div>
-              <button class="btn-primary" onclick="buyTicket('Deep Current')">Buy Tickets</button>
-            </div>
-          </div>
-
-          <!-- Event 5 — Sold Out -->
+          <!-- Event 5 — Sold Out 
           <div class="event-row sold-out">
             <div class="event-date-box">
               <div class="day">05</div>
@@ -1597,7 +1591,7 @@
             <div class="event-cta">
               <span class="sold-out-badge">Sold Out</span>
             </div>
-          </div>
+          </div> -->
 
         </div>
 
