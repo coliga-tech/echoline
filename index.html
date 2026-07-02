@@ -366,7 +366,7 @@
     }
 
     /* =============================================
-       CONTENT GRID (Tab 1)
+       CONTENT GRID (Tab 2)
     ============================================= */
     .filter-row {
       display: flex;
@@ -688,7 +688,7 @@
     .form-success p { color: var(--text-muted); font-size: 0.9rem; }
 
     /* =============================================
-       TICKETS (Tab 4)
+       TICKETS (Tab 1)
     ============================================= */
     .events-list {
       display: flex;
@@ -1079,7 +1079,7 @@
         <button role="tab" onclick="switchTab('content')" data-tab="content">Media</button>
       </li>
       <li role="presentation">
-        <button role="tab" onclick="switchTab('book-dj')" data-tab="book-dj">Local Talent</button>
+        <button role="tab" onclick="switchTab('local-talent')" data-tab="local-talent">Local Talent</button>
       </li>
       <li role="presentation">
         <button role="tab" onclick="switchTab('book-video')" data-tab="book-video">Music Society</button>
@@ -1097,14 +1097,14 @@
   <div id="mobile-menu" role="dialog" aria-label="Mobile navigation">
     <button onclick="switchTab('tickets'); closeMobileMenu(); setTimeout(() => { const el = document.querySelector('.events-list'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 200, behavior: 'smooth'}); }, 150);" data-tab="tickets" class="active">Events</button>
     <button onclick="switchTab('content'); closeMobileMenu();" data-tab="content">Media</button>
-    <button onclick="switchTab('book-dj'); closeMobileMenu();" data-tab="book-dj">Local Talent</button>
+    <button onclick="switchTab('local-talent'); closeMobileMenu();" data-tab="local-talent">Local Talent</button>
     <button onclick="switchTab('book-video'); closeMobileMenu();" data-tab="book-video">Music Society</button>
   </div>
 
   <main>
 
     <!-- =============================================
-         TAB 1: MEDIA
+         TAB 2: MEDIA
     ============================================= -->
     <div id="tab-content" class="tab-panel" role="tabpanel">
 
@@ -1227,7 +1227,7 @@
 
 
     <!-- =============================================
-         TAB 2: LOCAL TALENT
+         TAB 3: LOCAL TALENT
     ============================================= -->
     <div id="tab-local-talent" class="tab-panel" role="tabpanel">
 
@@ -1350,7 +1350,7 @@
 
 
     <!-- =============================================
-         TAB 3: BOOK A VIDEOGRAPHER
+         TAB 4: BOOK A VIDEOGRAPHER
     ============================================= -->
     <div id="tab-book-video" class="tab-panel" role="tabpanel">
       <section class="section">
@@ -1459,7 +1459,7 @@
 
 
     <!-- =============================================
-         TAB 4: EVENTS
+         TAB 1: EVENTS
     ============================================= -->
     <div id="tab-tickets" class="tab-panel active" role="tabpanel">
       
@@ -1472,7 +1472,7 @@
         <p>The pulse of downtown's underground music scene — raw sets, real culture, and the artists who define what comes next.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; position:relative; z-index:1;">
           <button class="btn-primary" onclick="const el = document.querySelector('.events-list'); window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth'})">Get Tickets</button>
-          <button class="btn-ghost" onclick="switchTab('book-dj')">Book Now</button>
+          <button class="btn-ghost" onclick="switchTab('local-talent')">Book Now</button>
         </div>
       </section>
 
