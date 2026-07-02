@@ -489,6 +489,61 @@
       .content-card.featured .card-thumb-placeholder { aspect-ratio: 16/9; }
     }
 
+    /* Highlighted song link */
+    .card-song-link {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ember);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      margin-top: 10px;
+      margin-bottom: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: color 0.2s;
+    }
+    
+    .card-song-link:hover {
+      color: var(--amber);
+    }
+    
+    /* Card icon row */
+    .card-social {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    
+    .card-social-link {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    
+    .card-social-link:hover {
+      border-color: var(--ember);
+    }
+    
+    .card-social-link .social-icon {
+      width: 14px;
+      height: 14px;
+      object-fit: contain;
+      filter: brightness(0) invert(0.5);
+      transition: filter 0.2s;
+    }
+    
+    .card-social-link:hover .social-icon {
+      filter: brightness(0) saturate(100%) invert(45%) sepia(90%) saturate(500%) hue-rotate(340deg) brightness(110%);
+    }
+
     /* =============================================
        BOOKING FORMS (Tabs 2 & 3)
     ============================================= */
@@ -1248,15 +1303,37 @@
         <!-- Grid -->
         <div class="content-grid" id="content-grid">
 
-          <!-- Featured card -->
+          <!-- DJ 1 -->
           <article class="content-card" data-type="dj">
-            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a0808 0%,#3d1206 40%,#8b3a00 100%);">
-              <span style="z-index:1; font-size:1.8rem;">DJ 1</span>
-            </div>
+            <!-- Photo — replace src with actual image path -->
+            <img class="card-thumb" src="/blank-pfp.png" alt="DJ Name" />
+          
             <div class="card-body">
               <p class="card-tag">DJ</p>
               <h3 class="card-title">FirstName LastName</h3>
               <p class="card-meta">Description goes here</p>
+          
+              <!-- Highlighted song link -->
+              <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-song-link">
+                ▶ Song Title — Artist Name
+              </a>
+          
+              <!-- Icon row -->
+              <div class="card-social">
+                <!-- Song icon -->
+                <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Listen">
+                  <img src="/icon-music.png" alt="Music" class="social-icon" />
+                </a>
+                <!-- Instagram icon -->
+                <a href="https://instagram.com/handle" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Instagram">
+                  <img src="/icons/instagram.png" alt="Instagram" class="social-icon" />
+                </a>
+                <!-- Email icon -->
+                <a href="mailto:email@example.com" class="card-social-link" title="Email">
+                  <img src="/icon-email.png" alt="Email" class="social-icon" />
+                </a>
+              </div>
+          
             </div>
           </article>
 
