@@ -1114,6 +1114,14 @@
     }
   </style>
   <script src="https://ticketscandy.com/assets/javascript/tc_widget.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+      TCWidget.createWidget({
+        iframeContainerId: 'tc-container-iframe-19095',
+        iframeUrl: '//ticketscandy.com/e/19095/embed'
+      });
+    });
+  </script>
 </head>
 <body>
 
@@ -1769,7 +1777,7 @@
                 <div class="price-label">From</div>
                 <div class="price-amount">$5</div>
               </div>
-              <button class="btn-primary" onclick="buyTicket('Living Room I')">Buy Tickets</button>
+              <button class="btn-primary" onclick="buyTicket2('Living Room I')">Buy Tickets</button>
             </div>
           </div>
 
@@ -1891,7 +1899,7 @@
     </nav>
   </footer>
 
-  <!-- Ticket modal -->
+  <!-- Ticket modal - Event 1 -->
   <div id="ticket-modal" style="
     display:none; position:fixed; inset:0; z-index:2000;
     background:rgba(0,0,0,0.92); backdrop-filter:blur(6px);
@@ -1913,6 +1921,31 @@
         color:var(--amber); margin-bottom:20px; padding-right:24px;
       "></p>
       <div id="tc-container-iframe-18982"></div>
+    </div>
+  </div>
+
+  <!-- Ticket modal — Event 2 -->
+  <div id="ticket-modal-2" style="
+    display:none; position:fixed; inset:0; z-index:2000;
+    background:rgba(0,0,0,0.92); backdrop-filter:blur(6px);
+    align-items:center; justify-content:center; padding:16px;
+  ">
+    <div style="
+      background:var(--bg-card); border:1px solid var(--border);
+      border-radius:var(--radius-lg); padding:24px; max-width:680px; width:100%;
+      max-height:90vh; overflow-y:auto; position:relative;
+    ">
+      <button onclick="closeTicketModal2()" style="
+        position:absolute; top:14px; right:16px;
+        background:none; border:none; color:var(--text-muted);
+        font-size:1.4rem; cursor:pointer; line-height:1;
+      ">✕</button>
+      <p style="
+        font-family:var(--font-display); font-size:1.3rem;
+        letter-spacing:0.06em; text-transform:uppercase;
+        color:var(--amber); margin-bottom:20px; padding-right:24px;
+      ">Living Room I</p>
+      <div id="tc-container-iframe-19095"></div>
     </div>
   </div>
 
@@ -2001,7 +2034,7 @@
     }
 
     /* =============================================
-       TICKET MODAL
+       GROOVEROOM TICKET MODAL
     ============================================= */
     function buyTicket(eventName) {
       document.getElementById('modal-event-name').textContent = eventName;
@@ -2025,6 +2058,22 @@
     // Close modal on Escape
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeTicketModal();
+    });
+
+    /* =============================================
+       LIVING ROOM TICKET MODAL
+    ============================================= */
+    function buyTicket2(eventName) {
+      document.getElementById('ticket-modal-2').style.display = 'flex';
+    }
+    
+    function closeTicketModal2() {
+      document.getElementById('ticket-modal-2').style.display = 'none';
+    }
+    
+    // Close modal 2 on backdrop click
+    document.getElementById('ticket-modal-2').addEventListener('click', function(e) {
+      if (e.target === this) closeTicketModal2();
     });
 
     /* =============================================
