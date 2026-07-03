@@ -1295,8 +1295,8 @@
         <div class="filter-row" role="group" aria-label="Filter content">
           <button class="filter-btn active" onclick="filterContent(this, 'all')">All</button>
           <button class="filter-btn" onclick="filterContent(this, 'dj')">DJs</button>
-          <button class="filter-btn" onclick="filterContent(this, 'producers')">Producers</button>
-          <button class="filter-btn" onclick="filterContent(this, 'artists')">Artists</button>
+          <button class="filter-btn" onclick="filterContent(this, 'producer')">Producers</button>
+          <button class="filter-btn" onclick="filterContent(this, 'artist')">Artists</button>
           <button class="filter-btn" onclick="filterContent(this, 'camera')">Camera Operators</button>
         </div>
 
@@ -1322,7 +1322,7 @@
               <div class="card-social">
                 <!-- Song icon -->
                 <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Listen">
-                  <img src="/icon-music.png" alt="Music" class="social-icon" />
+                  <img src="/music-note.png" alt="Music" class="social-icon" />
                 </a>
                 <!-- Instagram icon -->
                 <a href="https://instagram.com/handle" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Instagram">
@@ -1330,7 +1330,7 @@
                 </a>
                 <!-- Email icon -->
                 <a href="mailto:email@example.com" class="card-social-link" title="Email">
-                  <img src="/icon-email.png" alt="Email" class="social-icon" />
+                  <img src="/mailto-icon.png" alt="Email" class="social-icon" />
                 </a>
               </div>
           
@@ -1338,86 +1338,240 @@
           </article>
 
           <!-- Producer 1 -->
-          <article class="content-card" data-type="producers">
-            <div class="card-thumb-placeholder" style="background: linear-gradient(160deg,#0d0d1a 0%,#1a0d3d 60%,#3d0d6b 100%);">
-              <span style="z-index:1; font-size:1.1rem;">PRODUCER 1</span>
-            </div>
+          <article class="content-card" data-type="producer">
+            <!-- Photo — replace src with actual image path -->
+            <img class="card-thumb" src="/blank-pfp.png" alt="Producer Name" />
+          
             <div class="card-body">
               <p class="card-tag">Producer</p>
               <h3 class="card-title">FirstName LastName</h3>
               <p class="card-meta">Description goes here</p>
+          
+              <!-- Highlighted song link -->
+              <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-song-link">
+                ▶ Song Title — Artist Name
+              </a>
+          
+              <!-- Icon row -->
+              <div class="card-social">
+                <!-- Song icon -->
+                <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Listen">
+                  <img src="/music-note.png" alt="Music" class="social-icon" />
+                </a>
+                <!-- Instagram icon -->
+                <a href="https://instagram.com/handle" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Instagram">
+                  <img src="/instagram.png" alt="Instagram" class="social-icon" />
+                </a>
+                <!-- Email icon -->
+                <a href="mailto:email@example.com" class="card-social-link" title="Email">
+                  <img src="/mailto-icon.png" alt="Email" class="social-icon" />
+                </a>
+              </div>
+          
             </div>
           </article>
 
           <!-- Artist 1 -->
-          <article class="content-card" data-type="artists">
-            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a1000 0%,#3d2800 50%,#8b5a00 100%);">
-              <span style="z-index:1; font-size:1.1rem;">ARTIST 1</span>
-            </div>
+          <article class="content-card" data-type="artist">
+            <!-- Photo — replace src with actual image path -->
+            <img class="card-thumb" src="/blank-pfp.png" alt="Artist Name" />
+          
             <div class="card-body">
               <p class="card-tag">Artist</p>
               <h3 class="card-title">FirstName LastName</h3>
               <p class="card-meta">Description goes here</p>
+          
+              <!-- Highlighted song link -->
+              <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-song-link">
+                ▶ Song Title — Artist Name
+              </a>
+          
+              <!-- Icon row -->
+              <div class="card-social">
+                <!-- Song icon -->
+                <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Listen">
+                  <img src="/music-note.png" alt="Music" class="social-icon" />
+                </a>
+                <!-- Instagram icon -->
+                <a href="https://instagram.com/handle" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Instagram">
+                  <img src="/instagram.png" alt="Instagram" class="social-icon" />
+                </a>
+                <!-- Email icon -->
+                <a href="mailto:email@example.com" class="card-social-link" title="Email">
+                  <img src="/mailto-icon.png" alt="Email" class="social-icon" />
+                </a>
+              </div>
+          
             </div>
           </article>
 
           <!-- Camera 1 -->
           <article class="content-card" data-type="camera">
-            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#0a1a0a 0%,#0d3d1a 50%,#1a5c28 100%);">
-              <span style="z-index:1; font-size:1.1rem;">CAMERA PERSON 1</span>
-            </div>
+            <!-- Photo — replace src with actual image path -->
+            <img class="card-thumb" src="/blank-pfp.png" alt="Camera Operator Name" />
+          
             <div class="card-body">
               <p class="card-tag">Camera Operator</p>
               <h3 class="card-title">FirstName LastName</h3>
               <p class="card-meta">Description goes here</p>
+          
+              <!-- Highlighted song link -->
+              <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-song-link">
+                ▶ Song Title — Artist Name
+              </a>
+          
+              <!-- Icon row -->
+              <div class="card-social">
+                <!-- Song icon -->
+                <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Listen">
+                  <img src="/music-note.png" alt="Music" class="social-icon" />
+                </a>
+                <!-- Instagram icon -->
+                <a href="https://instagram.com/handle" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Instagram">
+                  <img src="/instagram.png" alt="Instagram" class="social-icon" />
+                </a>
+                <!-- Email icon -->
+                <a href="mailto:email@example.com" class="card-social-link" title="Email">
+                  <img src="/mailto-icon.png" alt="Email" class="social-icon" />
+                </a>
+              </div>
+          
             </div>
           </article>
 
           <!-- DJ 2 -->
           <article class="content-card" data-type="dj">
-            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a1000 0%,#3d2800 50%,#8b5a00 100%);">
-              <span style="z-index:1; font-size:1.1rem;">DJ 2</span>
-            </div>
+            <!-- Photo — replace src with actual image path -->
+            <img class="card-thumb" src="/blank-pfp.png" alt="DJ Name" />
+          
             <div class="card-body">
               <p class="card-tag">DJ</p>
               <h3 class="card-title">FirstName LastName</h3>
               <p class="card-meta">Description goes here</p>
+          
+              <!-- Highlighted song link -->
+              <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-song-link">
+                ▶ Song Title — Artist Name
+              </a>
+          
+              <!-- Icon row -->
+              <div class="card-social">
+                <!-- Song icon -->
+                <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Listen">
+                  <img src="/music-note.png" alt="Music" class="social-icon" />
+                </a>
+                <!-- Instagram icon -->
+                <a href="https://instagram.com/handle" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Instagram">
+                  <img src="/instagram.png" alt="Instagram" class="social-icon" />
+                </a>
+                <!-- Email icon -->
+                <a href="mailto:email@example.com" class="card-social-link" title="Email">
+                  <img src="/mailto-icon.png" alt="Email" class="social-icon" />
+                </a>
+              </div>
+          
             </div>
           </article>
 
           <!-- Producer 2 -->
           <article class="content-card" data-type="producers">
-            <div class="card-thumb-placeholder" style="background: linear-gradient(160deg,#1a0a0d 0%,#3d0a1a 60%,#6b1a30 100%);">
-              <span style="z-index:1; font-size:1.1rem;">PRODUCER 2</span>
-            </div>
+            <!-- Photo — replace src with actual image path -->
+            <img class="card-thumb" src="/blank-pfp.png" alt="Producer Name" />
+          
             <div class="card-body">
               <p class="card-tag">Producer</p>
               <h3 class="card-title">FirstName LastName</h3>
               <p class="card-meta">Description goes here</p>
+          
+              <!-- Highlighted song link -->
+              <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-song-link">
+                ▶ Song Title — Artist Name
+              </a>
+          
+              <!-- Icon row -->
+              <div class="card-social">
+                <!-- Song icon -->
+                <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Listen">
+                  <img src="/music-note.png" alt="Music" class="social-icon" />
+                </a>
+                <!-- Instagram icon -->
+                <a href="https://instagram.com/handle" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Instagram">
+                  <img src="/instagram.png" alt="Instagram" class="social-icon" />
+                </a>
+                <!-- Email icon -->
+                <a href="mailto:email@example.com" class="card-social-link" title="Email">
+                  <img src="/mailto-icon.png" alt="Email" class="social-icon" />
+                </a>
+              </div>
+          
             </div>
           </article>
 
           <!-- Artist 2 -->
-          <article class="content-card" data-type="artists">
-            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#0a0d1a 0%,#0d1a3d 50%,#1a2d6b 100%);">
-              <span style="z-index:1; font-size:1.1rem;">ARTIST 2</span>
-            </div>
+          <article class="content-card" data-type="artist">
+            <!-- Photo — replace src with actual image path -->
+            <img class="card-thumb" src="/blank-pfp.png" alt="Artist Name" />
+          
             <div class="card-body">
               <p class="card-tag">Artist</p>
               <h3 class="card-title">FirstName LastName</h3>
               <p class="card-meta">Description goes here</p>
+          
+              <!-- Highlighted song link -->
+              <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-song-link">
+                ▶ Song Title — Artist Name
+              </a>
+          
+              <!-- Icon row -->
+              <div class="card-social">
+                <!-- Song icon -->
+                <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Listen">
+                  <img src="/music-note.png" alt="Music" class="social-icon" />
+                </a>
+                <!-- Instagram icon -->
+                <a href="https://instagram.com/handle" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Instagram">
+                  <img src="/instagram.png" alt="Instagram" class="social-icon" />
+                </a>
+                <!-- Email icon -->
+                <a href="mailto:email@example.com" class="card-social-link" title="Email">
+                  <img src="/mailto-icon.png" alt="Email" class="social-icon" />
+                </a>
+              </div>
+          
             </div>
           </article>
 
           <!-- Camera 2 -->
           <article class="content-card" data-type="camera">
-            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a0808 0%,#3d1206 40%,#8b3a00 100%);">
-              <span style="z-index:1; font-size:1.1rem;">CAMERA PERSON 2</span>
-            </div>
+            <!-- Photo — replace src with actual image path -->
+            <img class="card-thumb" src="/blank-pfp.png" alt="Camera Operator Name" />
+          
             <div class="card-body">
               <p class="card-tag">Camera Operator</p>
               <h3 class="card-title">FirstName LastName</h3>
               <p class="card-meta">Description goes here</p>
+          
+              <!-- Highlighted song link -->
+              <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-song-link">
+                ▶ Song Title — Artist Name
+              </a>
+          
+              <!-- Icon row -->
+              <div class="card-social">
+                <!-- Song icon -->
+                <a href="https://link-to-song.com" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Listen">
+                  <img src="/music-note.png" alt="Music" class="social-icon" />
+                </a>
+                <!-- Instagram icon -->
+                <a href="https://instagram.com/handle" target="_blank" rel="noopener noreferrer" class="card-social-link" title="Instagram">
+                  <img src="/instagram.png" alt="Instagram" class="social-icon" />
+                </a>
+                <!-- Email icon -->
+                <a href="mailto:email@example.com" class="card-social-link" title="Email">
+                  <img src="/mailto-icon.png" alt="Email" class="social-icon" />
+                </a>
+              </div>
+          
             </div>
           </article>
 
