@@ -1958,15 +1958,18 @@
       document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
       // Deactivate all nav buttons
       document.querySelectorAll('[data-tab]').forEach(b => b.classList.remove('active'));
-
+    
       // Show target panel
       const panel = document.getElementById('tab-' + tabId);
       if (panel) panel.classList.add('active');
-
+    
       // Activate matching buttons
       document.querySelectorAll('[data-tab="' + tabId + '"]').forEach(b => b.classList.add('active'));
-
-      // Scroll to top of main content
+    
+      // Save current tab to URL hash
+      window.location.hash = tabId;
+    
+      // Scroll to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -2082,6 +2085,15 @@
     // Set min date on date inputs to today
     const today = new Date().toISOString().split('T')[0];
     document.querySelectorAll('input[type="date"]').forEach(el => el.setAttribute('min', today));
+
+    // On page load, check URL hash and restore the correct tab
+    (function() {
+      const hash = window.location.hash.replace('#', '');
+      const validTabs = ['tickets', 'media', 'local-talent'];
+      if (hash && validTabs.includes(hash)) {
+        switchTab(hash);
+      }
+    })();
   </script>
 </body>
 </html>
