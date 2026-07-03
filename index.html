@@ -1139,7 +1139,7 @@
         <button role="tab" class="active" onclick="switchTab('tickets'); setTimeout(() => { const el = document.querySelector('.events-list'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth'}); }, 150);" data-tab="tickets">Events</button>
       </li>
       <li role="presentation">
-        <button role="tab" onclick="switchTab('content')" data-tab="content">Media</button>
+        <button role="tab" onclick="switchTab('media')" data-tab="media">Media</button>
       </li>
       <li role="presentation">
         <button role="tab" onclick="switchTab('local-talent')" data-tab="local-talent">Local Talent</button>
@@ -1159,7 +1159,7 @@
   <!-- Mobile drawer -->
   <div id="mobile-menu" role="dialog" aria-label="Mobile navigation">
     <button onclick="switchTab('tickets'); closeMobileMenu(); setTimeout(() => { const el = document.querySelector('.events-list'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 200, behavior: 'smooth'}); }, 150);" data-tab="tickets" class="active">Events</button>
-    <button onclick="switchTab('content'); closeMobileMenu();" data-tab="content">Media</button>
+    <button onclick="switchTab('media'); closeMobileMenu();" data-tab="media">Media</button>
     <button onclick="switchTab('local-talent'); closeMobileMenu();" data-tab="local-talent">Local Talent</button>
     <!-- <button onclick="switchTab('book-video'); closeMobileMenu();" data-tab="book-video">Music Society</button> -->
   </div>
@@ -1887,7 +1887,7 @@
   </main>
 
   <footer>
-    <a class="footer-brand" href="#" onclick="switchTab('content'); return false;">
+    <a class="footer-brand" href="#" onclick="switchTab('media'); return false;">
       <img src="/echologo-removebg.png" alt="Echoline" />
       <span class="footer-wordmark">echoline</span>
     </a>
