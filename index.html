@@ -448,6 +448,21 @@
       background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.7) 100%);
     }
 
+    /* YouTube video embed in card */
+    .card-video-wrap {
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: var(--bg-raised);
+    }
+    
+    .card-video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: none;
+    }
+
     .card-body {
       padding: 18px 20px 22px;
     }
@@ -1190,13 +1205,14 @@
 
           <!-- Featured card -->
           <article class="content-card featured" data-type="recap">
-            <div class="card-thumb-placeholder" style="background: linear-gradient(135deg,#1a0808 0%,#3d1206 40%,#8b3a00 100%);">
-              <span style="z-index:1; font-size:1.8rem;">GROOVEROOM VOL. I</span>
-            </div>
-            <div class="card-body">
-              <p class="card-tag">Event Recap</p>
-              <h3 class="card-title">GrooveRoom  Vol. I — HouseParty to Start The Summer</h3>
-              <p class="card-meta">May 15, 2026 · 40 in attendance</p>
+            <div class="card-video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/jAWMnsSjvBY"
+                title="GR2 - Disco's Revenge (Recap)"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
             </div>
           </article>
 
