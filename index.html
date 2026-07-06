@@ -816,6 +816,42 @@
       transition: border-color 0.25s, box-shadow 0.25s;
     }
 
+    /* Alternate color scheme for standout event */
+    .event-row--alt {
+      background: linear-gradient(135deg, #1a0d2e 0%, #2d1b4e 50%, #1a1a2e 100%);
+      border-color: rgba(147, 51, 234, 0.35);
+    }
+    
+    .event-row--alt:hover {
+      border-color: rgba(147, 51, 234, 0.7);
+      box-shadow: 0 4px 32px rgba(147, 51, 234, 0.2);
+    }
+    
+    .event-row--alt .day {
+      background: linear-gradient(135deg, #a855f7, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .event-row--alt .price-amount {
+      color: #a855f7;
+    }
+    
+    .event-row--alt .event-tag {
+      border-color: rgba(147, 51, 234, 0.35);
+      color: #a855f7;
+    }
+    
+    .event-row--alt .btn-primary {
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      box-shadow: 0 0 28px rgba(147, 51, 234, 0.35);
+    }
+    
+    .event-row--alt .btn-primary:hover {
+      box-shadow: 0 0 44px rgba(147, 51, 234, 0.55);
+    }
+
     .event-row:hover {
       border-color: var(--ember);
       box-shadow: 0 4px 32px rgba(255,107,26,0.14);
@@ -1864,7 +1900,7 @@
           </div>
 
           <!-- Event 3 -->
-          <div class="event-row">
+          <div class="event-row event-row--alt">
             <div class="event-date-box">
               <div class="day">26</div>
               <div class="month">Jul</div>
