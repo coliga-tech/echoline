@@ -454,6 +454,8 @@
       aspect-ratio: 16/9;
       overflow: hidden;
       background: var(--bg-raised);
+      will-change: transform;
+      transform: translateZ(0);
     }
     
     .card-video-wrap iframe {
@@ -1283,6 +1285,7 @@
                 src="https://www.youtube.com/embed/G-UGlvQZlFo"
                 title="GR2 - Disco's Revenge (Recap)"
                 frameborder="0"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
@@ -1301,12 +1304,13 @@
                 src="https://www.youtube.com/embed/1_EkD2yOf5Y"
                 title="Video Title"
                 frameborder="0"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
             </div>
             <div class="card-body">
-              <p class="card-tag">Event Recap</p>
+              <p class="card-tag">Content Piece</p>
               <h3 class="card-title">Video Title</h3>
               <p class="card-meta">Description Placeholder</p>
             </div>
@@ -1319,12 +1323,13 @@
                 src="https://www.youtube.com/embed/da187_myJ9Q"
                 title="Video Title"
                 frameborder="0"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
             </div>
             <div class="card-body">
-              <p class="card-tag">Event Recap</p>
+              <p class="card-tag">Content Piece</p>
               <h3 class="card-title">Video Title</h3>
               <p class="card-meta">Description Placeholder</p>
             </div>
@@ -1337,12 +1342,13 @@
                 src="https://www.youtube.com/embed/jAWMnsSjvBY"
                 title="Video Title"
                 frameborder="0"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
             </div>
             <div class="card-body">
-              <p class="card-tag">Event Recap</p>
+              <p class="card-tag">Music Video</p>
               <h3 class="card-title">Video Title</h3>
               <p class="card-meta">Description Placeholder</p>
             </div>
@@ -1367,12 +1373,13 @@
                 src="https://www.youtube.com/embed/1dZqqZ6Q7jA"
                 title="Video Title"
                 frameborder="0"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
             </div>
             <div class="card-body">
-              <p class="card-tag">Event Recap</p>
+              <p class="card-tag">Content Piece</p>
               <h3 class="card-title">Video Title</h3>
               <p class="card-meta">Description Placeholder</p>
             </div>
@@ -1600,7 +1607,7 @@
           </article>
 
           <!-- Producer 2 -->
-          <article class="content-card" data-type="producers">
+          <article class="content-card" data-type="producer">
             <!-- Photo — replace src with actual image path -->
             <img class="card-thumb" src="/blank-pfp.png" alt="Producer Name" />
           
