@@ -2104,7 +2104,7 @@
     // On page load, check URL hash and restore the correct tab
     (function() {
       const hash = window.location.hash.replace('#', '');
-      const validTabs = ['tickets', 'media', 'local-talent'];
+      const validTabs = ['media', 'tickets', 'local-talent'];
       if (hash && validTabs.includes(hash)) {
         switchTab(hash);
       }
