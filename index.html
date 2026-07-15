@@ -1226,10 +1226,10 @@
 
     <ul class="nav-tabs" role="tablist">
       <li role="presentation">
-        <button role="tab" class="active" onclick="switchTab('tickets'); setTimeout(() => { const el = document.querySelector('.events-list'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth'}); }, 150);" data-tab="tickets">Events</button>
+        <button role="tab" class="active" onclick="switchTab('media'); setTimeout(() => { const el = document.querySelector('.content-grid'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth'}); }, 150);" data-tab="media">Media</button>
       </li>
       <li role="presentation">
-        <button role="tab" onclick="switchTab('media')" data-tab="media">Media</button>
+        <button role="tab" onclick="switchTab('tickets')" data-tab="tickets">Events</button>
       </li>
       <li role="presentation">
         <button role="tab" onclick="switchTab('local-talent')" data-tab="local-talent">Local Talent</button>
@@ -1248,8 +1248,8 @@
 
   <!-- Mobile drawer -->
   <div id="mobile-menu" role="dialog" aria-label="Mobile navigation">
-    <button onclick="switchTab('tickets'); closeMobileMenu(); setTimeout(() => { const el = document.querySelector('.events-list'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 200, behavior: 'smooth'}); }, 150);" data-tab="tickets" class="active">Events</button>
-    <button onclick="switchTab('media'); closeMobileMenu();" data-tab="media">Media</button>
+    <button onclick="switchTab('media'); closeMobileMenu(); setTimeout(() => { const el = document.querySelector('.content-grid'); if(el) window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 200, behavior: 'smooth'}); }, 150);" data-tab="media" class="active">Media</button>
+    <button onclick="switchTab('tickets'); closeMobileMenu();" data-tab="tickets">Events</button>
     <button onclick="switchTab('local-talent'); closeMobileMenu();" data-tab="local-talent">Local Talent</button>
     <!-- <button onclick="switchTab('book-video'); closeMobileMenu();" data-tab="book-video">Music Society</button> -->
   </div>
@@ -1257,9 +1257,24 @@
   <main>
 
     <!-- =============================================
-         TAB 2: MEDIA
+         TAB 1: MEDIA
     ============================================= -->
     <div id="tab-media" class="tab-panel" role="tabpanel">
+
+      <!-- Hero -->
+      <section class="hero">
+        <p class="hero-eyebrow">Underground Talent & Community</p>
+        <div class="hero-logo-wrap">
+          <img src="/echologo-removebg.png" alt="Echoline" />
+        </div>
+        <p>The pulse of downtown Atlanta's underground music scene — raw sets, real culture, and the artists who define what comes next.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; position:relative; z-index:1;">
+          <button class="btn-primary" onclick="switchTab('tickets')">Get Tickets</button>
+          <button class="btn-ghost" onclick="switchTab('local-talent')">Book Now</button>
+        </div>
+      </section>
+
+      <hr class="rule" />
 
       <!-- Content Grid -->
       <section class="section">
@@ -1823,24 +1838,9 @@
 
 
     <!-- =============================================
-         TAB 1: EVENTS
+         TAB 2: EVENTS
     ============================================= -->
     <div id="tab-tickets" class="tab-panel active" role="tabpanel">
-      
-      <!-- Hero -->
-      <section class="hero">
-        <p class="hero-eyebrow">Underground Talent & Community</p>
-        <div class="hero-logo-wrap">
-          <img src="/echologo-removebg.png" alt="Echoline" />
-        </div>
-        <p>The pulse of downtown Atlanta's underground music scene — raw sets, real culture, and the artists who define what comes next.</p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; position:relative; z-index:1;">
-          <button class="btn-primary" onclick="const el = document.querySelector('.events-list'); window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth'})">Get Tickets</button>
-          <button class="btn-ghost" onclick="switchTab('local-talent')">Book Now</button>
-        </div>
-      </section>
-
-      <hr class="rule" />
 
       <section class="section">
         <p class="section-label">Upcoming Events</p>
