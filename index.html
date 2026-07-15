@@ -2101,14 +2101,27 @@
     const today = new Date().toISOString().split('T')[0];
     document.querySelectorAll('input[type="date"]').forEach(el => el.setAttribute('min', today));
 
-    // On page load, check URL hash and restore the correct tab
+    // On page load, honor a valid hash (deep link) if present; otherwise
+    // clean up any stray/invalid hash and show the default homepage tab.
     (function() {
       const hash = window.location.hash.replace('#', '');
       const validTabs = ['media', 'tickets', 'local-talent'];
       if (hash && validTabs.includes(hash)) {
         switchTab(hash);
+      } else if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
       }
+      window.scrollTo(0, 0);
     })();
+    
+    // On page load, check URL hash and restore the correct tab
+    // (function() {
+    //  const hash = window.location.hash.replace('#', '');
+    //  const validTabs = ['media', 'tickets', 'local-talent'];
+    //  if (hash && validTabs.includes(hash)) {
+    //    switchTab(hash);
+    //  }
+    // })();
   </script>
 </body>
 </html>
