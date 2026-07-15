@@ -425,6 +425,14 @@
       background: var(--bg-raised);
     }
 
+    /* Team Echo headshots: show the full photo, no cropping */
+    #tab-local-talent .card-thumb {
+      aspect-ratio: 4 / 5;      /* portrait box, closer to a headshot's natural shape */
+      object-fit: cover;      /* shows the entire image instead of cropping to fill */
+      background: var(--bg-raised); /* fills any leftover space instead of showing white/transparent */
+      object-position: top;
+    }
+
     /* Placeholder thumbs with gradient + text */
     .card-thumb-placeholder {
       width: 100%;
