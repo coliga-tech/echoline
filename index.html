@@ -252,7 +252,7 @@
       position: relative;
       z-index: 1;
       display: inline-block;
-      margin-top: 8px;
+      margin-top: 0px;
       margin-bottom: 32px;
     }
 
@@ -285,11 +285,11 @@
     
     @media (min-width: 768px) {
       .hero-eyebrow {
-        font-size: clamp(1.4rem, 2vw, 2.8rem) !important;
+        font-size: clamp(1.4rem, 2vw, 2.4rem) !important;
         letter-spacing: 0.04em;
-        max-width: none;
-        padding: 0 clamp(16px, 4vw, 48px);
-        box-sizing: border-box;
+        white-space: nowrap;
+        overflow: visible;
+        margin-bottom: 0px;
       }
     }
 
