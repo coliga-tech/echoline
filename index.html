@@ -285,8 +285,11 @@
     
     @media (min-width: 768px) {
       .hero-eyebrow {
-        font-size: clamp(1.4rem, 2.5vw, 2.4rem) !important;
+        font-size: clamp(1.4rem, 2.5vw, 2.8rem) !important;
         letter-spacing: 0.04em;
+        max-width: 100%;
+        padding: 0 clamp(16px, 4vw, 48px);
+        box-sizing: border-box;
       }
     }
 
